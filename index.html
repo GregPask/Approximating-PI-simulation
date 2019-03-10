@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat" rel="stylesheet">
+  
+</head>
+<body onload="startGame()">
+    <h2>Monte Carlo Simulation</h2>
+    <hr>
+    <p>Since we know the area of a circle is  (&pi;r) &#178; and the area of the square is (4r) &#178;. This implies a relationship between the two. By rearranging we get:</p>
+    <p>&pi; = 4 * (ratio).</p>
+
+    <p>We can estimate this ratio by randomly picking a point on the diagram below. (Points inside circle  / total points).</p>
+    <p>After numerous iterations we should obtain a approximation of &pi;</p>
+    
+    
+    
+    <div id="container">
+        <div>
+            <button onclick="stopFunc()" id="btn">Stop Simulation</button>
+            <button onclick="startFunc()" id="btn2">Start Simulation</button>
+        </div>
+        <div id="pi-wrap">
+            <div id="left">
+                <h3>Actual value of &pi;:</h3>
+                <p>3.141592653589</p>
+            </div>
+            <div id="right">
+                <h3>Current Approximation of &pi;:</h3>
+                <p id="pi">3.141592653589</p>
+            </div>
+        </div>
+    <canvas id="canvas"></canvas>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
